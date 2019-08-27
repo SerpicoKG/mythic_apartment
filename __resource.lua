@@ -6,8 +6,6 @@ author 'Alzar - https://github.com/Alzar'
 version 'v1.0.0'
 url 'https://github.com/mythicrp/'
 
-ui_page 'html/index.html'
-
 client_scripts {
 	"client/main.lua",
 }
@@ -16,13 +14,8 @@ server_scripts {
 	'server/main.lua',
 }
 
-files {
-    'html/index.html',
-    'html/js/app.js',
-    'html/door_open.wav',
-    'html/door_close.wav',
-}
-
 dependencies {
 	'mythic_base',
 }
+
+this_is_a_map 'yes'
