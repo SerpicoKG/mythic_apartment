@@ -63,7 +63,7 @@ AddEventHandler('mythic_base:client:CharacterSpawned', function()
 
                 if not IsPedInAnyVehicle(PlayerPedId(), true) then
                     if distance < 1 then
-                        Print3DText(apartment[2], '~c~[E] ~s~Enter Apartment')
+                        Print3DText(apartment[2], '~r~[E] ~s~Enter Apartment')
                         if IsControlJustReleased(1, 51) then
                             Citizen.CreateThread(function()
                                 DoScreenFadeOut(500)
@@ -119,7 +119,7 @@ function InApartment()
             local logoutDistance = #(vector3(apartment[6].x, apartment[6].y, apartment[6].z) - plyCoords)
 
             if stashDistance < 1 then
-                Print3DText(apartment[4], '~c~[E] ~s~' .. apartment[4].name)
+                Print3DText(apartment[4], '~r~[E] ~s~' .. apartment[4].name)
                 if IsControlJustReleased(1, 51) then
                     TriggerServerEvent('mythic_apartment:server:GetStash')
                 end
@@ -128,14 +128,14 @@ function InApartment()
             end
 
             if outfitsDistance < 1 then
-                Print3DText(apartment[5], '~c~[E] ~s~' .. apartment[5].name)
+                Print3DText(apartment[5], '~r~[E] ~s~' .. apartment[5].name)
                 if IsControlJustReleased(1, 51) then
                     TriggerServerEvent('mythic_clotheshop:server:PrepareCloset')
                 end
             end
 
             if logoutDistance < 1 then
-                Print3DText(apartment[6], '~c~[E] ~s~' .. apartment[6].name)
+                Print3DText(apartment[6], '~r~[E] ~s~' .. apartment[6].name)
 
                 if IsControlJustReleased(1, 51) then
                     inApartment = false
@@ -147,7 +147,7 @@ function InApartment()
             end
 
             if exitDistance < 1 then
-                Print3DText(apartment[3], '~c~[E] ~s~Exit Apartment')
+                Print3DText(apartment[3], '~r~[E] ~s~Exit Apartment')
                 if IsControlJustReleased(1, 51) then
                     inApartment = false
                     --TriggerEvent('mythic_instances:client:leave')

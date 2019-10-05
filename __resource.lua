@@ -7,15 +7,18 @@ version 'v1.0.0'
 url 'https://github.com/mythicrp/'
 
 client_scripts {
+	'@salty_tokenizer/init.lua',
 	"client/main.lua",
 }
 
 server_scripts {
+	'@salty_tokenizer/init.lua',
 	'server/main.lua',
 }
 
 dependencies {
 	'mythic_base',
+	'salty_tokenizer',
 }
 
 this_is_a_map 'yes'
